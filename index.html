@@ -8,12 +8,24 @@
       sound.components.sound.stopSound();
       sound.components.sound.playSound();
     })
+    
   </script>
   </head>
 
 <body>
   
   <a-scene>
+    
+    <a-assets>
+    <audio id="cough" src="images/cough.mp3" preload="auto"></audio>
+    </a-assets>
+    
+    <!-- Camera -->
+    <a-entity position="0 0 5">
+      <a-camera>
+      <a-cursor></a-cursor>
+      </a-camera>
+    </a-entity>
     
     <a-assets>
     <audio id="cough" src="images/cough.mp3" preload="auto"></audio>
