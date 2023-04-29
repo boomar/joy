@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  <script>
+    document.addEventListener("click", () => {
+      sound = document.querySelector("[sound]")
+      sound.components.sound.stopSound();
+      sound.components.sound.playSound();
+    })
+    
+  </script>
+  </head>
+
+<body>
+  
+  <a-scene>
+    
+    <a-assets>
+    <audio id="cough" src="images/cough.mp3" preload="auto"></audio>
+    </a-assets>
+    
+    <!-- Camera -->
+    <a-entity position="0 0 5">
+      <a-camera>
+      <a-cursor></a-cursor>
+      </a-camera>
+    </a-entity>
+      
+    <!--Background-->
+      <a-entity position="100 -20 -50">
+      <a-image src="images/bgnd.png" scale = "0.3 0.3 10" width="1501" height="486" rotation="0 -90 0" transparent="true" alpha-test="0.5" ></a-image>
+      </a-entity>
+    
+    <!--Runners-->
+      <a-entity position="40 -20 -140" sound="src: #cough; on: click; volume: 30; refDistance: 1; rolloffFactor: 1">
+      <a-image src="images/runners.png" scale = "0.15 0.15 0" width="699" height="578" rotation="0 -70 0" transparent="true" alpha-test="0.5"></a-image>
+      </a-entity>
+   
+    <!--Grass-->
+      <a-entity position="10 -10 -130">
+      <a-image src="images/grass.png" scale = "0.05 0.1 0" width="450" height="672" rotation="0 -25 0" transparent="true" alpha-test="0.5"></a-image>
+      </a-entity>
+   
+    
+  </a-scene>
+ 
+</body>
+</html>
