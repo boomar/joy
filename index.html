@@ -18,6 +18,7 @@
     
     <a-assets>
     <audio id="cough" src="images/cough.mp3" preload="auto"></audio>
+    <audio id="country" src="images/country_sounds.mp3" preload="auto"></audio>
     </a-assets>
     
     <!-- Camera -->
@@ -38,7 +39,7 @@
       </a-entity>
    
     <!--Grass-->
-      <a-entity position="10 -20 -60">
+      <a-entity position="10 -20 -60" sound="src: #country; on: click; volume: 30; refDistance: 1; rolloffFactor: 1">>
       <a-image src="images/grass.png" scale = "0.3 0.3 0" width="1015" height="349" rotation="0 -25 0" transparent="true" alpha-test="0.5"></a-image>
       </a-entity>
    
